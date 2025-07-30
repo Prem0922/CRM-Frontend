@@ -198,7 +198,7 @@ function Trips() {
     try {
       setLoading(true);
       const data = await getTrips();
-      const sortedData = data.slice().sort((a, b) => new Date(b.start_time).getTime() - new Date(a.start_time).getTime());
+      const sortedData = data.slice().sort((a: Trip, b: Trip) => new Date(b.start_time).getTime() - new Date(a.start_time).getTime());
       setTrips(sortedData);
       setFilteredTrips(sortedData);
     } catch (error) {
