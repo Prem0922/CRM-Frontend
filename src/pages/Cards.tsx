@@ -48,14 +48,9 @@ interface Customer {
 }
 
 const cardTypes = [
-  'Adult',
-  'Student',
-  'Senior',
-  'Child',
-  'Corporate',
-  'Tourist',
-  'Special',
-  'VIP',
+  'Account Based Card'
+  'Bank Card',
+  'Closed Loop Card',
 ];
 
 const cardStatuses = ['Active', 'Blocked', 'Expired', 'Lost', 'Suspended'];
