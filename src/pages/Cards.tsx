@@ -48,9 +48,14 @@ interface Customer {
 }
 
 const cardTypes = [
-  'Account Based Card'
-  'Bank Card',
-  'Closed Loop Card',
+  'Adult',
+  'Student',
+  'Senior',
+  'Child',
+  'Corporate',
+  'Tourist',
+  'Special',
+  'VIP',
 ];
 
 const cardStatuses = ['Active', 'Blocked', 'Expired', 'Lost', 'Suspended'];
@@ -114,13 +119,13 @@ const filterFields = [
 ];
 
 const Cards = () => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedFilter, setSelectedFilter] = useState('none')
-  const [cards, setCards] = useState<Card[]>([])
-  const [selectedCard, setSelectedCard] = useState<Card | null>(null)
-  const [customers, setCustomers] = useState<Customer[]>([])
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const toast = useToast()
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedFilter, setSelectedFilter] = useState('none');
+  const [cards, setCards] = useState<Card[]>([]);
+  const [selectedCard, setSelectedCard] = useState<Card | null>(null);
+  const [customers, setCustomers] = useState<Customer[]>([]);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const toast = useToast();
 
   const fetchCards = async () => {
     try {
